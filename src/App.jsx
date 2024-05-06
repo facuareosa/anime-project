@@ -1,8 +1,10 @@
 import React from 'react'
+import TopAnime from './components/TopAnime'
+import ShowResults from './components/ShowResults'
 
 function App() {
   return (
-    <div>App</div>
+    <div><ShowResults/></div>
   )
 }
 

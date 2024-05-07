@@ -1,0 +1,26 @@
+.card{
+    background-color: red;
+    box-sizing: border-box;
+    width: 25%;
+    padding:1rem;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    &__title{
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-wrap: wrap;
+        text-align: center;
+    }
+    &__img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    &__status{
+    }
+}

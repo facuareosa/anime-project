@@ -15,10 +15,10 @@ function App() {
   },[data])
 
   return (
-    <div>
-      <p>App</p>
-      { <ul>
-      {topAnime?.map((info)=> (<li>{info.title}{info.score}</li>))}
+    <div className='top'>
+      <p className='top__title'>TOP 5 ANIME</p>
+      { <ul className='top__list'>
+      {topAnime?.map((info)=> (<li key={info.mal_id} className='top__listItem'>{info.title}{info.score}</li>))}
       </ul>}
     </div>
 

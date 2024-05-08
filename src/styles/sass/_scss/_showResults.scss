@@ -1,7 +1,12 @@
+.results__container{
+    grid-column: span 3;
+    display: flex;
+    flex-wrap: wrap;
+}
 .card{
-    background-color: red;
     box-sizing: border-box;
-    width: 25%;
+    width: 15rem;
+    
     padding:1rem;
     border-radius: 50px;
     background: #e0e0e0;
@@ -12,14 +17,18 @@
     align-items: center;
     gap: 1rem;
     &__title{
-        font-size: 1.25rem;
-        font-weight: bold;
-        text-wrap: wrap;
+        @include font('Courier New', 1.25rem, bold, black);
         text-align: center;
+        text-wrap: nowrap;
+
     }
     &__img{
-        width: 100%;
-        border-radius: 10px;
+        height: 80%;
+
+        border-radius: 40px;
+        &:hover{
+            opacity: 0.5;
+        }
     }
     &__status{
     }

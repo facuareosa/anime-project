@@ -1,12 +1,69 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.header__container {
+  height: 5rem;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  background: #f0f0f0;
+  box-shadow: 5px 5px 10px #9a9a9a, -5px -5px 10px #ffffff;
+}
+.header__logo {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50px;
+  filter: drop-shadow(0px 0px 2px white);
+}
+.header__title {
+  font-family: "Courier New";
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+.header__list {
+  height: 3rem;
+}
+
+.main {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
+body {
+  background-color: #F0F0F0;
+}
+
+.results__container {
+  grid-column: span 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
-  background-color: red;
   box-sizing: border-box;
-  width: 25%;
+  width: 15rem;
   padding: 1rem;
   border-radius: 50px;
   background: #e0e0e0;
@@ -17,14 +74,19 @@ html {
   gap: 1rem;
 }
 .card__title {
+  font-family: "Courier New";
   font-size: 1.25rem;
   font-weight: bold;
-  text-wrap: wrap;
+  color: black;
   text-align: center;
+  text-wrap: nowrap;
 }
 .card__img {
-  width: 100%;
-  border-radius: 10px;
+  height: 80%;
+  border-radius: 40px;
+}
+.card__img:hover {
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=styles.css.map */

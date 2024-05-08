@@ -13,15 +13,15 @@ function ShowResults() {
   },[data])
 
   return (
-    <div style={{display:'grid', gridTemplateColumns:'repeat 4(1fr)'}}>
+    <div className='results__container'>
         {topAnime?.map((results) => (
             <div className='card' key={results.mal_id}>
-                <h2 className='card__title'>{results.title}</h2>
+                {/* <h2 className='card__title'>{results.title}</h2> */}
                 <img className='card__img' src={results.images.webp.image_url} alt={"imagen de portada de " + results.title} />
-                {results.airing === true
+                {/* {results.airing === true
                     ? <p className='card__status'>al aire</p>
                     : <p className='card__status'>Finalizado</p>
-                }
+                } */}
             </div>
         ))}
     </div>

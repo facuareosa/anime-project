@@ -1,10 +1,13 @@
 import React from 'react'
 import TopAnime from './components/TopAnime'
 import ShowResults from './components/ShowResults'
+import Home from './pages/Home'
 
 function App() {
   return (
-    <div><ShowResults/></div>
+    <>
+      <Home/>
+    </>
   )
 }
 

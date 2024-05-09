@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useFetch } from './useFetch'
+import splash from '../assets/images/splash.png'
 
 function ShowResults() {
 
@@ -16,12 +17,11 @@ function ShowResults() {
     <div className='results__container'>
         {topAnime?.map((results) => (
             <div className='card' key={results.mal_id}>
-                {/* <h2 className='card__title'>{results.title}</h2> */}
+              <div className='card__imgContainer'>
+                <h2 className='card__title'>{results.title}</h2>
+                <img className='card__img-hover' src={splash}/>
                 <img className='card__img' src={results.images.webp.image_url} alt={"imagen de portada de " + results.title} />
-                {/* {results.airing === true
-                    ? <p className='card__status'>al aire</p>
-                    : <p className='card__status'>Finalizado</p>
-                } */}
+              </div>
             </div>
         ))}
     </div>

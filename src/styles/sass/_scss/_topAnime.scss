@@ -1,12 +1,12 @@
 .top{
     grid-column: span 1;
     &__title{
-    
+        @include font(('joemax',Courier New), 1.25rem, bold, black);
     }
     &__list{
     
     }
     &__listItem{
-    
+        @include font('Courier New', 1rem, bold, black);
     }
 }

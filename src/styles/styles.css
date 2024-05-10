@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "joemax";
+  src: url("../assets/fonts/JoeMax-qV2x.otf") format("opentype");
+}
+@font-face {
+  font-family: "betset";
+  src: url("../assets/fonts/MsmmBetSet-eWDO.ttf") format("truetype");
+}
 #root {
   display: flex;
   flex-direction: column;
@@ -30,7 +38,7 @@
   filter: drop-shadow(0px 0px 2px white);
 }
 .header__title {
-  font-family: "Courier New";
+  font-family: betset, Courier New;
   font-size: 2rem;
   font-weight: bold;
   color: black;
@@ -79,7 +87,7 @@ body {
   gap: 1rem;
 }
 .card__title {
-  font-family: "Courier New";
+  font-family: "joemax", Courier New;
   font-size: 1.25rem;
   font-weight: bold;
   color: black;
@@ -111,6 +119,22 @@ body {
 .card:hover .card__img-hover, .card:hover .card__title {
   opacity: 1;
   transition: all ease-in 0.15s;
+}
+
+.top {
+  grid-column: span 1;
+}
+.top__title {
+  font-family: "joemax", Courier New;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+}
+.top__listItem {
+  font-family: "Courier New";
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

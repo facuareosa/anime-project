@@ -20,7 +20,7 @@
     gap: 1rem;
     
     &__title{
-        @include font('Courier New', 1.25rem, bold, black);
+        @include font(('joemax',Courier New), 1.25rem, bold, black);
         position: absolute;
         z-index: 10;
         text-align: center;

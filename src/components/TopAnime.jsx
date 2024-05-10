@@ -18,7 +18,7 @@ function App() {
     <div className='top'>
       <p className='top__title'>TOP 5 ANIME</p>
       { <ul className='top__list'>
-      {topAnime?.map((info)=> (<li key={info.mal_id} className='top__listItem'>{info.title}{info.score}</li>))}
+      {topAnime?.map((info)=> (<li key={info.mal_id} className='top__listItem'>{info.title}</li>))}
       </ul>}
     </div>
 

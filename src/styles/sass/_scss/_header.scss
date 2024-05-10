@@ -23,7 +23,7 @@
         filter: drop-shadow(0px 0px 2px white);
     }
     &__title{
-        @include font ('Courier New', 2rem, bold, black)
+        @include font ((betset, Courier New), 2rem, bold, black);
     }
     &__list{
         height: 3rem;

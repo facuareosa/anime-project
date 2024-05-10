@@ -4,7 +4,7 @@ import splash from '../assets/images/splash.png'
 
 function ShowResults() {
 
-    const {data} = useFetch("https://api.jikan.moe/v4/top/anime?filter=favorite&type=tv")
+    const {data} = useFetch("https://api.jikan.moe/v4/top/anime?q=naruto&filter=favorite&type=tv")
     const [topAnime, setTopAnime] = useState(null);
 
   useEffect(()=>{

@@ -1,12 +1,14 @@
 .top{
+    padding: 2rem 0;
     grid-column: span 1;
     &__title{
         @include font(('joemax',Courier New), 1.25rem, bold, black);
     }
     &__list{
-    
+        margin-top: 1rem
     }
     &__listItem{
         @include font('Courier New', 1rem, bold, black);
+        margin:0.75rem 0
     }
 }

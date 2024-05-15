@@ -2,20 +2,29 @@ import React, {useState, useEffect} from 'react'
 import { useFetch } from './useFetch'
 import splash from '../assets/images/splash.png'
 
-function ShowResults() {
+function ShowResults({searchValue}) {
+  const [animeReuslts, setAnimeResults] = useState(null);
+  const [dataToFetch, setDataToFetch] = useState("https://api.jikan.moe/v4/top/anime?filter=favorite&type=tv")
+  const {data} = useFetch(dataToFetch)
 
-    const {data} = useFetch("https://api.jikan.moe/v4/top/anime?q=naruto&filter=favorite&type=tv")
-    const [topAnime, setTopAnime] = useState(null);
-
-  useEffect(()=>{
-    if (data && data.data) {
-        setTopAnime(data.data);
+  useEffect(() => {
+    console.log(searchValue)
+    if (searchValue !== ""){ 
+    const newUrl = `https://api.jikan.moe/v4/anime?q=${searchValue}&sfw`;
+    setDataToFetch(newUrl);
     }
-  },[data])
+  }, [searchValue]);
+
+  useEffect(() => {
+    if (data && data.data) {
+        console.log(data.data)
+        setAnimeResults(data.data);
+    }
+  }, [data]);
 
   return (
     <div className='results__container'>
-        {topAnime?.map((results) => (
+        {animeReuslts?.map((results) => (
             <div className='card' key={results.mal_id}>
               <div className='card__imgContainer'>
                 <h2 className='card__title'>{results.title}</h2>

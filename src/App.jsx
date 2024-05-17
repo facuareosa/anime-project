@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/animeinfo' element={<Description/>} />
+          <Route path='/anime/:animeid/info' element={<Description/>} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,31 +1,29 @@
 import { useEffect, useState } from "react";
 import React from 'react'
 import { useFetch } from "../components/useFetch";
+import { useParams } from "react-router-dom";
 
 function Description() {
     const [animeReuslts, setAnimeResults] = useState(null);
-    const [dataToFetch, setDataToFetch] = useState("https://api.jikan.moe/v4/anime/25/full")
+    const [dataToFetch, setDataToFetch] = useState(null)
     const {data} = useFetch(dataToFetch)
-    const [prueba, setPrueba] = useState(null)
     
-    // useEffect(() => {
-    //     const newUrl = `https://api.jikan.moe/v4/anime/${id}/full`;
-    //     setDataToFetch(newUrl);
-    //   }, []);
+    const params = useParams()
+    
+    useEffect(() => {
+        const newUrl = `https://api.jikan.moe/v4/anime/${params.animeid}/full`;
+        setDataToFetch(newUrl);
+      }, []);
     
       useEffect(() => {
         if (data && data.data) {
             setAnimeResults(data.data);
         }
       }, [data]);
-
-      useEffect (()=>{
-        if(animeReuslts && animeReuslts.title){
-            setPrueba(animeReuslts.title)
-        }
-      }),[]
     return (
-    <div>{prueba}</div>
+    <div>{animeReuslts!==null ? 
+      <h1>{animeReuslts.title}</h1>:<p>Loading</p>
+    }</div>
   )
 }
 

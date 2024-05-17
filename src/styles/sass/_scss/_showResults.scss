@@ -27,6 +27,8 @@
     }
     &__imgContainer{
         position: relative;
+        height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -35,6 +37,7 @@
         border-radius: 40px;
     }
     &__img{
+        object-fit: cover;
         &-hover{
             position:absolute;
             width: 100%;

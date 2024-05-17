@@ -99,12 +99,17 @@ body {
 }
 .card__imgContainer {
   position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   border-radius: 40px;
+}
+.card__img {
+  object-fit: cover;
 }
 .card__img-hover {
   position: absolute;

@@ -1,0 +1,14 @@
+.article{
+    &-home{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &-description{
+        display: grid;
+        grid-template-areas:
+        "title  title   title"
+        "side   synop   synop"
+        "side   synop   synop"
+        ;
+    }
+}

@@ -1,0 +1,25 @@
+.description{
+
+    &__title{
+        grid-area: title;
+        justify-self: center;
+        @include font(('joemax',Courier New), 3rem, bold, black);
+        text-transform: uppercase;
+    }
+    &__side{
+        grid-area: side;
+        display: flex;
+        flex-direction: column;
+        &-img{
+            width: 15rem;
+            border-radius: 40px;
+        }
+        &-animeStatus{
+            
+        }
+        
+    }
+    &__synopsis{
+        @include font("Courier New", 1rem, bold, black);    
+    }
+}

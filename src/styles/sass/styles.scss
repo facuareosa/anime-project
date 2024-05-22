@@ -11,6 +11,7 @@
 @import "./_scss/header";
 @import "./_scss/main";
 
+
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -19,4 +20,6 @@ body{
     background-color: #F0F0F0 ;
 }
 @import "./_scss/showResults";
-@import "./_scss/topAnime"
+@import "./_scss/topAnime";
+@import "./_scss/article";
+@import "./_scss/description";

@@ -1,9 +1,9 @@
 .main{
     width: 100%;
+    box-sizing: border-box;
     max-width: 1200px;
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem;
     border-radius: 50px;
     background: #f0f0f0;
     box-shadow: 5px 5px 10px #9a9a9a, -5px -5px 10px #ffffff;

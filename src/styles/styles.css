@@ -49,10 +49,10 @@
 
 .main {
   width: 100%;
+  box-sizing: border-box;
   max-width: 1200px;
   margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
   border-radius: 50px;
   background: #f0f0f0;
   box-shadow: 5px 5px 10px #9a9a9a, -5px -5px 10px #ffffff;
@@ -145,6 +145,40 @@ body {
   font-weight: bold;
   color: black;
   margin: 0.75rem 0;
+}
+
+.article-home {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.article-description {
+  display: grid;
+  grid-template-areas: "title  title   title" "side   synop   synop" "side   synop   synop";
+}
+
+.description__title {
+  grid-area: title;
+  justify-self: center;
+  font-family: "joemax", Courier New;
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+}
+.description__side {
+  grid-area: side;
+  display: flex;
+  flex-direction: column;
+}
+.description__side-img {
+  width: 15rem;
+  border-radius: 40px;
+}
+.description__synopsis {
+  font-family: "Courier New";
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

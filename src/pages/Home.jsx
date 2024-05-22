@@ -16,8 +16,10 @@ function Home() {
         <Header/>
         <FilterInput onButtonClick={handleButtonClick}/>
         <main className='main'>
-          <TopAnime/>
-          <ShowResults searchValue={searchValue}/>
+          <article className='article article-home'>
+            <TopAnime/>
+            <ShowResults searchValue={searchValue}/>
+          </article>
         </main>
     </>
   )
